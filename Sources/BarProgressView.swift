@@ -24,7 +24,7 @@ import UIKit
         UIGraphicsPushContext(ctx)
         let size = ctx.convertToUserSpace(CGSize(width: ctx.width, height: ctx.height))
         let rect = CGRect(origin: CGPoint.zero, size: size)
-        TestStyleKit.drawProgressBarDisplay(frame: rect, resizing: .aspectFit, progress: progress)
+        ProgressStyleKit.drawProgressBarDisplay(frame: rect, resizing: .aspectFit, progress: progress)
         UIGraphicsPopContext()
     }
 }

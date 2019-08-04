@@ -17,6 +17,4 @@ excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Example
   - Sources/stylekit # stylekits are auto generated
 disabled_rules: # rule identifiers to exclude from running
-  - trailing_whitespace
   - line_length
-  - force_cast

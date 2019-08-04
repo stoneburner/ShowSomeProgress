@@ -13,7 +13,7 @@ import UIKit
         UIGraphicsPushContext(ctx)
         let size = ctx.convertToUserSpace(CGSize(width: ctx.width, height: ctx.height))
         let rect = CGRect(origin: CGPoint.zero, size: size)
-        TestStyleKit.drawProgressCircleDisplay(frame: rect, resizing: .aspectFit, progress: progress)
+        ProgressStyleKit.drawProgressCircleDisplay(frame: rect, resizing: .aspectFit, progress: progress)
         UIGraphicsPopContext()
     }
 }

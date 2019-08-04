@@ -8,8 +8,6 @@
 
 import UIKit
 
-typealias DrawingFunction = (_ frame: CGRect, _ resizing: TestStyleKit.ResizingBehavior, _ progress: CGFloat) -> Void
-
 protocol Progressable: CALayer {
     var progress: CGFloat { get set }
 }
