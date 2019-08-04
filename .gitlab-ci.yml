@@ -1,0 +1,23 @@
+stages:
+  - Tests
+  - Compatibility
+
+UnitTests:
+  stage: Tests
+  only:
+    - master
+    - develop
+    - /^hotfix.*$/
+    - /^feature.*$/
+  script:
+    fastlane ios tests
+
+DependencyManagerCompatibility:
+  stage: Compatibility
+  only:
+    - master
+    - develop
+    - /^hotfix.*$/
+    - /^feature.*$/
+  script:
+    fastlane ios compatibilityTests

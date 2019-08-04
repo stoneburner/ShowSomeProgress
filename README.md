@@ -21,8 +21,6 @@
    </a>
 </p>
 
-# ShowSomeProgress
-
 <p align="center">
 ℹ️ Progress Indicators and Activity Views for iOS Apps
 </p>

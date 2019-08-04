@@ -1,0 +1,7 @@
+# ShowSomeProgress document generator jazzy settings
+
+copyright: Copyright 2019 ShowSomeProgress
+author: Alexander Kasimir
+xcodebuild_arguments: [-target, ShowSomeProgress-iOS]
+clean: true
+output: ./Documentation
