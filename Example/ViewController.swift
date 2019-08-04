@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var smallCircleView4: CircleProgressView!
 
     @IBOutlet weak var barProgressView: BarProgressView!
+    @IBOutlet weak var barProgressView2: BarProgressView!
 
     @IBAction func setRandomValueTapped(_ sender: Any) {
         progressView.progress = CGFloat(Double.random(in: 0...1))
@@ -27,6 +28,7 @@ class ViewController: UIViewController {
         smallCircleView3.progress = CGFloat(Double.random(in: 0...1))
         smallCircleView4.progress = CGFloat(Double.random(in: 0...1))
         barProgressView.progress = CGFloat(Double.random(in: 0...1))
+        barProgressView2.progress = CGFloat(Double.random(in: 0...1))
     }
     
 }

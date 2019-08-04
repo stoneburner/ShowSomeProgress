@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="ApD-LK-gXq">
-                                <rect key="frame" x="20" y="64" width="374" height="730"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="ApD-LK-gXq">
+                                <rect key="frame" x="20" y="64" width="374" height="585"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wCz-M7-A2N">
                                         <rect key="frame" x="37" y="0.0" width="300" height="155"/>
@@ -87,7 +87,7 @@
                                         </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZZc-JO-D6g" customClass="CircleProgressView" customModule="ShowSomeProgress">
-                                        <rect key="frame" x="67" y="192" width="240" height="196"/>
+                                        <rect key="frame" x="67" y="181" width="240" height="196"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="196" id="3oE-vw-Abs"/>
@@ -104,7 +104,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDJ-gj-ynI" customClass="BarProgressView" customModule="ShowSomeProgress">
-                                        <rect key="frame" x="67" y="477.5" width="240" height="50"/>
+                                        <rect key="frame" x="67" y="403" width="240" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="0k4-Zb-UeQ"/>
@@ -119,8 +119,25 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5vg-fW-XCL" customClass="BarProgressView" customModule="ShowSomeProgress">
+                                        <rect key="frame" x="67" y="479" width="240" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Rk6-ZV-gXQ"/>
+                                            <constraint firstAttribute="width" constant="240" id="ddn-sh-0tx"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
+                                                <color key="value" red="0.098623078145851459" green="0.65609374999999992" blue="0.10398339195445243" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showTriangle" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6m-ds-bdo">
-                                        <rect key="frame" x="124" y="700" width="126" height="30"/>
+                                        <rect key="frame" x="124" y="555" width="126" height="30"/>
                                         <state key="normal" title="Set Random Value"/>
                                         <connections>
                                             <action selector="setRandomValueTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Xb-je-pdj"/>
@@ -139,6 +156,7 @@
                     </view>
                     <connections>
                         <outlet property="barProgressView" destination="RDJ-gj-ynI" id="GPP-W9-FmG"/>
+                        <outlet property="barProgressView2" destination="5vg-fW-XCL" id="gdG-zg-qET"/>
                         <outlet property="progressView" destination="ZZc-JO-D6g" id="DWV-yp-0rH"/>
                         <outlet property="smallCircleView" destination="FEC-fV-JXa" id="bLK-ZC-qRg"/>
                         <outlet property="smallCircleView2" destination="9Mb-NJ-4ZW" id="0yq-X6-xMw"/>
