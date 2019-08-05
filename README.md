@@ -68,6 +68,9 @@ import ShowSomeProgress
 
 The example application is the best way to see `ShowSomeProgress` in action. Simply open the `ShowSomeProgress.xcodeproj` and run the `Example` scheme.
 
+![Example app](graphics/example.gif)
+
+
 ## Installation
 <!--
 ### CocoaPods
