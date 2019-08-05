@@ -58,11 +58,11 @@ import ShowSomeProgress
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var circleProgressView: CircleProgressView!
+  @IBOutlet weak var circleProgressView: CircleProgressView!
 
-    @IBAction func setRandomValueTapped(_ sender: Any) {
-      circleProgressView.progress = CGFloat(Double.random(in: 0...1))
-  	}
+  @IBAction func setRandomValueTapped(_ sender: Any) {
+    circleProgressView.progress = CGFloat(Double.random(in: 0...1))
+  }
 }  
 ```
 
