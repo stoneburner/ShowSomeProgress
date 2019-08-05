@@ -53,15 +53,17 @@ Progress Indicators and Activity Views for iOS Apps
 Just import the framework and use the views like you would use `UIProgressView`
 
 ```swift
+import UIKit
 import ShowSomeProgress
+
+class ViewController: UIViewController {
 
     @IBOutlet weak var circleProgressView: CircleProgressView!
 
-	class ViewController: UIViewController {
-	    @IBAction func setRandomValueTapped(_ sender: Any) {
-	        circleProgressView.progress = CGFloat(Double.random(in: 0...1))
-		 }
-	}  
+    @IBAction func setRandomValueTapped(_ sender: Any) {
+      circleProgressView.progress = CGFloat(Double.random(in: 0...1))
+  	}
+}  
 ```
 
 ## Example
