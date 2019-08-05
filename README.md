@@ -22,12 +22,47 @@
 </p>
 
 <p align="center">
-ℹ️ Progress Indicators and Activity Views for iOS Apps
+Progress Indicators and Activity Views for iOS Apps
 </p>
 
 ## Features
 
-- [x] ℹ️ Add ShowSomeProgress features
+- [x] Storyboard compatible, configure apprearance with the property inspector.
+- [x] fully animated, just set a new progress value and the view will update itself smoothly
+
+## Currenty Implemented Progress Indicators
+
+`CircleProgressView` - A circular indicator
+
+![CircleProgressView](graphics/ProgressCircleDisplay.gif)
+
+`BarProgressView` - A bar indicator
+
+![BarProgressView](graphics/ProgressBarDisplay.gif)
+
+
+### Configurable properties:
+* `progress` - progress value - 0.0 - 1.0
+* `progressColor` - UIColor of the progress indicator
+* `showTriangle` - Bool, selects visibility of the small triangle 
+
+![Storyboard](graphics/anotated_storyboard_screenshot.png)
+
+## Usage
+
+Just import the framework and use the views like you would use `UIProgressView`
+
+```swift
+import ShowSomeProgress
+
+    @IBOutlet weak var circleProgressView: CircleProgressView!
+
+	class ViewController: UIViewController {
+	    @IBAction func setRandomValueTapped(_ sender: Any) {
+	        circleProgressView.progress = CGFloat(Double.random(in: 0...1))
+		 }
+	}  
+```
 
 ## Example
 
@@ -52,7 +87,7 @@ pod 'ShowSomeProgress'
 To integrate ShowSomeProgress into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "Alexander Kasimir/ShowSomeProgress"
+github "stoneburner/ShowSomeProgress"
 ```
 
 Run `carthage update` to build the framework and drag the built `ShowSomeProgress.framework` into your Xcode project. 
@@ -65,17 +100,13 @@ To integrate using Apple's [Swift Package Manager](https://swift.org/package-man
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/AlexanderKasimir/ShowSomeProgress.git", from: "1.0.0")
+    .package(url: "https://github.com/stoneburner/ShowSomeProgress.git", from: "1.0.0")
 ]
 ```
 
 ### Manually
 
 If you prefer not to use any of the aforementioned dependency managers, you can integrate ShowSomeProgress into your project manually. Simply drag the `Sources` Folder into your Xcode project.
-
-## Usage
-
-ℹ️ Describe the usage of your Kit
 
 ## Contributing
 Contributions are very welcome 🙌
