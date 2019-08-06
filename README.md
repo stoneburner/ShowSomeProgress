@@ -57,7 +57,7 @@ Progress Indicators and Activity Views for iOS Apps
 
 `OrbitActivityIndicatorView3` - Shows chasing dots system during Activity 
 
-![OrbitActivityIndicatorView](graphics/OrbitIndicator 3.gif)
+![OrbitActivityIndicatorView](graphics/OrbitIndicator3.gif)
 
 ### Configurable properties:
 * `tintColor` - color of the view
