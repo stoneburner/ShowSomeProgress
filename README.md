@@ -40,15 +40,31 @@ Progress Indicators and Activity Views for iOS Apps
 
 ![BarProgressView](graphics/ProgressBarDisplay.gif)
 
-
 ### Configurable properties:
 * `progress` - progress value - 0.0 - 1.0
 * `progressColor` - UIColor of the progress indicator
 * `showTriangle` - Bool, selects visibility of the small triangle 
 
-![Storyboard](graphics/anotated_storyboard_screenshot.png)
+## Currently Implemented Activity Indicators
+
+`OrbitActivityIndicatorView` - Shows a simplifed planetary system during Activity 
+
+![OrbitActivityIndicatorView](graphics/OrbitIndicator.gif)
+
+`OrbitActivityIndicatorView2` - Shows a planetary system during Activity 
+
+![OrbitActivityIndicatorView](graphics/OrbitIndicator2.gif)
+
+`OrbitActivityIndicatorView3` - Shows chasing dots system during Activity 
+
+![OrbitActivityIndicatorView](graphics/OrbitIndicator 3.gif)
+
+### Configurable properties:
+* `tintColor` - color of the view
 
 ## Usage
+
+![Storyboard](graphics/anotated_storyboard_screenshot.png)
 
 Just import the framework and use the views like you would use `UIProgressView`
 
