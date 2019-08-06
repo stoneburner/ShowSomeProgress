@@ -17,7 +17,7 @@ public class ActivityStyleKit : NSObject {
 
     //// Drawing Methods
 
-    @objc dynamic public class func drawOrbitIndicator(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 78, height: 78), resizing: ResizingBehavior = .aspectFit, animationProgress: CGFloat = 0, progressColorRed: CGFloat = 0, progressColorGreen: CGFloat = 0.475, progressColorBlue: CGFloat = 1) {
+    @objc dynamic public class func drawOrbitIndicator(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 78, height: 78), resizing: ResizingBehavior = .aspectFit, animationProgress: CGFloat = 1, progressColorRed: CGFloat = 0, progressColorGreen: CGFloat = 0.475, progressColorBlue: CGFloat = 1) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
@@ -96,7 +96,7 @@ public class ActivityStyleKit : NSObject {
 
     }
 
-    @objc dynamic public class func drawOrbitIndicator2(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 78, height: 78), resizing: ResizingBehavior = .aspectFit, animationProgress: CGFloat = 0, progressColorRed: CGFloat = 0, progressColorGreen: CGFloat = 0.475, progressColorBlue: CGFloat = 1) {
+    @objc dynamic public class func drawOrbitIndicator2(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 78, height: 78), resizing: ResizingBehavior = .aspectFit, animationProgress: CGFloat = 1, progressColorRed: CGFloat = 0, progressColorGreen: CGFloat = 0.475, progressColorBlue: CGFloat = 1) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
@@ -177,6 +177,28 @@ public class ActivityStyleKit : NSObject {
         let centerPath = UIBezierPath(ovalIn: CGRect(x: 34.5, y: 34.5, width: 9, height: 9))
         progressBarColor.setFill()
         centerPath.fill()
+
+
+        //// Group
+        //// OuterRing Drawing
+        let outerRingPath = UIBezierPath(ovalIn: CGRect(x: 5.9, y: 6.29, width: 66.12, height: 65.62))
+        progressBarColor.setStroke()
+        outerRingPath.lineWidth = 1
+        outerRingPath.stroke()
+
+
+        //// MiddleRing Drawing
+        let middleRingPath = UIBezierPath(ovalIn: CGRect(x: 18.47, y: 18.66, width: 40.87, height: 40.87))
+        progressBarColor.setStroke()
+        middleRingPath.lineWidth = 1
+        middleRingPath.stroke()
+
+
+        //// InnerRing Drawing
+        let innerRingPath = UIBezierPath(ovalIn: CGRect(x: 27, y: 27, width: 24, height: 24))
+        progressBarColor.setStroke()
+        innerRingPath.lineWidth = 1
+        innerRingPath.stroke()
         
         context.restoreGState()
 
