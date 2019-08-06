@@ -61,7 +61,7 @@ Progress Indicators and Activity Views for iOS Apps
 
 `GearActivityIndicatorView` - Shows three gears during Activity 
 
-![GearActivityIndicatorView](graphics/Triplegears.gif)
+![GearActivityIndicatorView](graphics/tripleGears.gif)
 
 ### Configurable properties:
 * `tintColor` - color of the view
