@@ -17,7 +17,7 @@ public class ActivityStyleKit : NSObject {
 
     //// Drawing Methods
 
-    @objc dynamic public class func drawOrbitIndicator(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 78, height: 78), resizing: ResizingBehavior = .aspectFit, animationProgress: CGFloat = 1, progressColorRed: CGFloat = 0, progressColorGreen: CGFloat = 0.475, progressColorBlue: CGFloat = 1) {
+    @objc dynamic public class func drawOrbitIndicator(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 78, height: 78), resizing: ResizingBehavior = .aspectFit, animationProgress: CGFloat = 0, progressColorRed: CGFloat = 0, progressColorGreen: CGFloat = 0.475, progressColorBlue: CGFloat = 1) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
@@ -96,7 +96,7 @@ public class ActivityStyleKit : NSObject {
 
     }
 
-    @objc dynamic public class func drawOrbitIndicator2(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 78, height: 78), resizing: ResizingBehavior = .aspectFit, animationProgress: CGFloat = 1, progressColorRed: CGFloat = 0, progressColorGreen: CGFloat = 0.475, progressColorBlue: CGFloat = 1) {
+    @objc dynamic public class func drawOrbitIndicator2(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 78, height: 78), resizing: ResizingBehavior = .aspectFit, animationProgress: CGFloat = 0, progressColorRed: CGFloat = 0, progressColorGreen: CGFloat = 0.475, progressColorBlue: CGFloat = 1) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
@@ -199,6 +199,70 @@ public class ActivityStyleKit : NSObject {
         progressBarColor.setStroke()
         innerRingPath.lineWidth = 1
         innerRingPath.stroke()
+        
+        context.restoreGState()
+
+    }
+
+    @objc dynamic public class func drawOrbitIndicator3(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 78, height: 78), resizing: ResizingBehavior = .aspectFit, animationProgress: CGFloat = 0, progressColorRed: CGFloat = 0, progressColorGreen: CGFloat = 0.475, progressColorBlue: CGFloat = 1) {
+        //// General Declarations
+        let context = UIGraphicsGetCurrentContext()!
+        
+        //// Resize to Target Frame
+        context.saveGState()
+        let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 78, height: 78), target: targetFrame)
+        context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
+        context.scaleBy(x: resizedFrame.width / 78, y: resizedFrame.height / 78)
+
+
+
+        //// Variable Declarations
+        let rotationOnce: CGFloat = 360 * animationProgress
+        let rotationTwice: CGFloat = 360 * 2 * animationProgress
+        let rotationThrice: CGFloat = 360 * 3 * animationProgress
+        let progressBarColor = UIColor(red: progressColorRed, green: progressColorGreen, blue: progressColorBlue, alpha: 1)
+
+        //// OuterRing Drawing
+        let outerRingPath = UIBezierPath(ovalIn: CGRect(x: 9, y: 8.5, width: 60, height: 60))
+        progressBarColor.setStroke()
+        outerRingPath.lineWidth = 2
+        outerRingPath.stroke()
+
+
+        //// Outer Drawing
+        context.saveGState()
+        context.translateBy(x: 38.5, y: 38.5)
+        context.rotate(by: -rotationOnce * CGFloat.pi/180)
+
+        let outerPath = UIBezierPath(ovalIn: CGRect(x: -2.78, y: -33.3, width: 7, height: 7))
+        progressBarColor.setFill()
+        outerPath.fill()
+
+        context.restoreGState()
+
+
+        //// Outer 2 Drawing
+        context.saveGState()
+        context.translateBy(x: 38.5, y: 38.5)
+        context.rotate(by: -rotationTwice * CGFloat.pi/180)
+
+        let outer2Path = UIBezierPath(ovalIn: CGRect(x: -2.78, y: -33.3, width: 7, height: 7))
+        progressBarColor.setFill()
+        outer2Path.fill()
+
+        context.restoreGState()
+
+
+        //// Outer 3 Drawing
+        context.saveGState()
+        context.translateBy(x: 38.5, y: 38.5)
+        context.rotate(by: -rotationThrice * CGFloat.pi/180)
+
+        let outer3Path = UIBezierPath(ovalIn: CGRect(x: -2.78, y: -33.3, width: 7, height: 7))
+        progressBarColor.setFill()
+        outer3Path.fill()
+
+        context.restoreGState()
         
         context.restoreGState()
 

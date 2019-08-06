@@ -42,3 +42,20 @@ import UIKit
                                              progressColorBlue: colorParts.blue)
     }
 }
+
+@IBDesignable public class OrbitActivityIndicatorView3: UIView, AnimatedActivityUIView {
+
+    public var timer: Timer?
+    public var frameRate: TimeInterval = 1/30
+    public var animationProgress: CGFloat = 0.0
+
+    override public func draw(_ rect: CGRect) {
+        let colorParts = tintColor.components
+        ActivityStyleKit.drawOrbitIndicator3(frame: rect,
+                                             resizing: .aspectFit,
+                                             animationProgress: animationProgress,
+                                             progressColorRed: colorParts.red,
+                                             progressColorGreen: colorParts.green,
+                                             progressColorBlue: colorParts.blue)
+    }
+}

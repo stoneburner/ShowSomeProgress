@@ -22,7 +22,7 @@
                                 <rect key="frame" x="20" y="64" width="374" height="656"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="X5n-lD-NKR">
-                                        <rect key="frame" x="74" y="0.0" width="226" height="100"/>
+                                        <rect key="frame" x="11" y="0.0" width="352" height="100"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q4U-J1-QSF" customClass="OrbitActivityIndicatorView2" customModule="ShowSomeProgress">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -40,6 +40,15 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="d29-Oq-Gs8"/>
                                                     <constraint firstAttribute="height" constant="100" id="iiN-UH-AY2"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ye9-3d-OvD" customClass="OrbitActivityIndicatorView3" customModule="ShowSomeProgress">
+                                                <rect key="frame" x="252" y="0.0" width="100" height="100"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="R21-iE-caJ"/>
+                                                    <constraint firstAttribute="width" constant="100" id="nyJ-oW-2ls"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -180,6 +189,7 @@
                         <outlet property="barProgressView2" destination="5vg-fW-XCL" id="gdG-zg-qET"/>
                         <outlet property="orbitActivityIndicator" destination="Yte-zX-ry4" id="LUk-tV-4v8"/>
                         <outlet property="orbitActivityIndicator2" destination="Q4U-J1-QSF" id="FHZ-Px-Gpi"/>
+                        <outlet property="orbitActivityIndicator3" destination="ye9-3d-OvD" id="NS2-FI-iRI"/>
                         <outlet property="progressView" destination="ZZc-JO-D6g" id="DWV-yp-0rH"/>
                         <outlet property="smallCircleView" destination="FEC-fV-JXa" id="bLK-ZC-qRg"/>
                         <outlet property="smallCircleView2" destination="9Mb-NJ-4ZW" id="0yq-X6-xMw"/>

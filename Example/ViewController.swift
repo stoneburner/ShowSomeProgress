@@ -23,6 +23,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var orbitActivityIndicator: OrbitActivityIndicatorView!
     @IBOutlet weak var orbitActivityIndicator2: OrbitActivityIndicatorView2!
+    @IBOutlet weak var orbitActivityIndicator3: OrbitActivityIndicatorView3!
     @IBAction func setRandomValueTapped(_ sender: Any) {
         progressView.progress = CGFloat(Double.random(in: 0...1))
         smallCircleView.progress = CGFloat(Double.random(in: 0...1))
@@ -37,6 +38,7 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         orbitActivityIndicator.startAnimation()
         orbitActivityIndicator2.startAnimation()
+        orbitActivityIndicator3.startAnimation()
     }
 }
 
