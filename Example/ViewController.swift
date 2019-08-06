@@ -11,7 +11,7 @@ import ShowSomeProgress
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var progressView: CircleProgressView!
+    @IBOutlet weak var gearView: GearActivityIndicatorView!
 
     @IBOutlet weak var smallCircleView: CircleProgressView!
     @IBOutlet weak var smallCircleView2: CircleProgressView!
@@ -25,7 +25,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var orbitActivityIndicator2: OrbitActivityIndicatorView2!
     @IBOutlet weak var orbitActivityIndicator3: OrbitActivityIndicatorView3!
     @IBAction func setRandomValueTapped(_ sender: Any) {
-        progressView.progress = CGFloat(Double.random(in: 0...1))
         smallCircleView.progress = CGFloat(Double.random(in: 0...1))
         smallCircleView2.progress = CGFloat(Double.random(in: 0...1))
         smallCircleView3.progress = CGFloat(Double.random(in: 0...1))
@@ -36,6 +35,7 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        gearView.startAnimation()
         orbitActivityIndicator.startAnimation()
         orbitActivityIndicator2.startAnimation()
         orbitActivityIndicator3.startAnimation()
