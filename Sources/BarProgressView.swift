@@ -24,6 +24,7 @@ import UIKit
 }
 
  public class ProgressBarAnimationLayer: ProgressAnimationLayer {
+
     override public func draw(in ctx: CGContext) {
         UIGraphicsPushContext(ctx)
         let size = ctx.convertToUserSpace(CGSize(width: ctx.width, height: ctx.height))

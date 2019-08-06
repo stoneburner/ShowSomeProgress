@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var barProgressView: BarProgressView!
     @IBOutlet weak var barProgressView2: BarProgressView!
 
+    @IBOutlet weak var orbitActivityIndicator: OrbitActivityIndicatorView!
+    @IBOutlet weak var orbitActivityIndicator2: OrbitActivityIndicatorView2!
     @IBAction func setRandomValueTapped(_ sender: Any) {
         progressView.progress = CGFloat(Double.random(in: 0...1))
         smallCircleView.progress = CGFloat(Double.random(in: 0...1))
@@ -30,6 +32,11 @@ class ViewController: UIViewController {
         barProgressView.progress = CGFloat(Double.random(in: 0...1))
         barProgressView2.progress = CGFloat(Double.random(in: 0...1))
     }
-    
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        orbitActivityIndicator.startAnimation()
+        orbitActivityIndicator2.startAnimation()
+    }
 }
 
