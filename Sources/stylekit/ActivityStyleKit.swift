@@ -17,7 +17,7 @@ public class ActivityStyleKit : NSObject {
 
     //// Drawing Methods
 
-    @objc dynamic public class func drawOrbitIndicator(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 78, height: 78), resizing: ResizingBehavior = .aspectFit, animationProgress: CGFloat = 0.138, progressColorRed: CGFloat = 0, progressColorGreen: CGFloat = 0.475, progressColorBlue: CGFloat = 1) {
+    @objc dynamic public class func drawOrbitIndicator(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 78, height: 78), resizing: ResizingBehavior = .aspectFit, animationProgress: CGFloat = 0, progressColorRed: CGFloat = 0, progressColorGreen: CGFloat = 0.475, progressColorBlue: CGFloat = 1) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
@@ -96,7 +96,7 @@ public class ActivityStyleKit : NSObject {
 
     }
 
-    @objc dynamic public class func drawOrbitIndicator2(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 78, height: 78), resizing: ResizingBehavior = .aspectFit, animationProgress: CGFloat = 0.138, progressColorRed: CGFloat = 0, progressColorGreen: CGFloat = 0.475, progressColorBlue: CGFloat = 1) {
+    @objc dynamic public class func drawOrbitIndicator2(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 78, height: 78), resizing: ResizingBehavior = .aspectFit, animationProgress: CGFloat = 0, progressColorRed: CGFloat = 0, progressColorGreen: CGFloat = 0.475, progressColorBlue: CGFloat = 1) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
@@ -204,7 +204,7 @@ public class ActivityStyleKit : NSObject {
 
     }
 
-    @objc dynamic public class func drawOrbitIndicator3(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 78, height: 78), resizing: ResizingBehavior = .aspectFit, animationProgress: CGFloat = 0.138, progressColorRed: CGFloat = 0, progressColorGreen: CGFloat = 0.475, progressColorBlue: CGFloat = 1) {
+    @objc dynamic public class func drawOrbitIndicator3(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 78, height: 78), resizing: ResizingBehavior = .aspectFit, animationProgress: CGFloat = 0, progressColorRed: CGFloat = 0, progressColorGreen: CGFloat = 0.475, progressColorBlue: CGFloat = 1) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
@@ -268,7 +268,7 @@ public class ActivityStyleKit : NSObject {
 
     }
 
-    @objc dynamic public class func drawTripleGears(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 168, height: 177), resizing: ResizingBehavior = .aspectFit, animationProgress: CGFloat = 0.138, progressColorRed: CGFloat = 0, progressColorGreen: CGFloat = 0.475, progressColorBlue: CGFloat = 1) {
+    @objc dynamic public class func drawTripleGears(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 168, height: 177), resizing: ResizingBehavior = .aspectFit, animationProgress: CGFloat = 0, progressColorRed: CGFloat = 0, progressColorGreen: CGFloat = 0.475, progressColorBlue: CGFloat = 1) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
@@ -287,7 +287,7 @@ public class ActivityStyleKit : NSObject {
 
         //// Bezier 4 Drawing
         context.saveGState()
-        context.translateBy(x: 104.52, y: 85.44)
+        context.translateBy(x: 104.75, y: 85.21)
         context.rotate(by: -gear2Rotation * CGFloat.pi/180)
 
         let bezier4Path = UIBezierPath()
@@ -432,7 +432,7 @@ public class ActivityStyleKit : NSObject {
         progressBarColor.setFill()
         bezier4Path.fill()
         progressBarColor.setStroke()
-        bezier4Path.lineWidth = 1.5
+        bezier4Path.lineWidth = 0.5
         bezier4Path.lineCapStyle = .round
         bezier4Path.lineJoinStyle = .round
         bezier4Path.stroke()
@@ -442,7 +442,7 @@ public class ActivityStyleKit : NSObject {
 
         //// Bezier 2 Drawing
         context.saveGState()
-        context.translateBy(x: 34.59, y: 39.06)
+        context.translateBy(x: 37.02, y: 39.27)
         context.rotate(by: -gear1Rotation * CGFloat.pi/180)
 
         let bezier2Path = UIBezierPath()
@@ -512,7 +512,7 @@ public class ActivityStyleKit : NSObject {
         progressBarColor.setFill()
         bezier2Path.fill()
         progressBarColor.setStroke()
-        bezier2Path.lineWidth = 1.5
+        bezier2Path.lineWidth = 0.5
         bezier2Path.stroke()
 
         context.restoreGState()
@@ -520,7 +520,7 @@ public class ActivityStyleKit : NSObject {
 
         //// Bezier Drawing
         context.saveGState()
-        context.translateBy(x: 41.82, y: 139.65)
+        context.translateBy(x: 42.79, y: 138.2)
         context.rotate(by: -(gear1Rotation - 360) * CGFloat.pi/180)
 
         let bezierPath = UIBezierPath()
@@ -590,7 +590,7 @@ public class ActivityStyleKit : NSObject {
         progressBarColor.setFill()
         bezierPath.fill()
         progressBarColor.setStroke()
-        bezierPath.lineWidth = 1.5
+        bezierPath.lineWidth = 0.5
         bezierPath.stroke()
 
         context.restoreGState()
